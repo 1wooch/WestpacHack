@@ -1,0 +1,73 @@
+{
+    "bank": "YourBankName",
+    "clients": [
+      {
+        "accountNumber": "1234567890",
+        "pin": "1234",
+        "name": "Client1"
+      },
+      {
+        "accountNumber": "0987654321",
+        "pin": "4321",
+        "name": "Client2"
+      }
+    ],
+    "transactions": {
+      "1234567890": [
+        {
+          "transactionId": 1,
+          "category": "Shopping",
+          "amount": 100.00,
+          "date": "2023-10-30",
+          "location": "Online",
+          "place": "Amazon"
+        },
+        {
+          "transactionId": 2,
+          "category": "Dining",
+          "amount": 50.00,
+          "date": "2023-10-28",
+          "location": "Restaurant",
+          "place": "Cafe XYZ"
+        }
+      ],
+      "0987654321": [
+        {
+          "transactionId": 3,
+          "category": "Groceries",
+          "amount": 75.00,
+          "date": "2023-10-29",
+          "location": "Supermarket",
+          "place": "MegaMart"
+        },
+        {
+          "transactionId": 4,
+          "category": "Entertainment",
+          "amount": 30.00,
+          "date": "2023-10-25",
+          "location": "Theater",
+          "place": "CinemaPlex"
+        }
+      ]
+    },
+    "goals": [
+      {
+        "goalId": 1,
+        "accountNumber": "1234567890",
+        "name": "New Car",
+        "amount": 15000.00,
+        "duration": "1 year",
+        "weeklySavings": 288.46,
+        "savingsDuration": "6 months"
+      },
+      {
+        "goalId": 2,
+        "accountNumber": "0987654321",
+        "name": "Vacation",
+        "amount": 5000.00,
+        "duration": "6 months",
+        "weeklySavings": 192.31,
+        "savingsDuration": "3 months"
+      }
+    ]
+}
