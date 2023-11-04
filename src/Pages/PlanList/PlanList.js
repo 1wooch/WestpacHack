@@ -9,7 +9,8 @@ const iPhonePlan = {
     term: 12,
     unit: "week",
     payment: 212.41,
-    saved: 424.82
+    saved: 1707.83,
+    progress: "67%"
 };
 
 const FridgePlan = {
@@ -20,28 +21,37 @@ const FridgePlan = {
     term: 5,
     unit: "week",
     payment: 109.80,
-    saved: 0
+    saved: 54.9,
+    progress: "10%"
 };
 
 const plans = [iPhonePlan, FridgePlan];
 
 function PlanList() {
     return (
-        <div>
+        <div id="overall-box">
             <h1>Purchase Plan Summary</h1>
+
             {plans.map(obj => {
                 return (
-                    <div key={obj.title}>
-                        <p>{obj.title}</p>
-                        <img src={obj.image} />
-                        <p>{obj.currency} {obj.price}</p>
-                        <p>Already saved: {obj.saved}</p>
-                        <p>Left to go: {(parseFloat(obj.price.replace(/,/g, '')) - obj.saved).toFixed(2)}</p>
-                        <p>Still {((parseFloat(obj.price.replace(/,/g, '')) - obj.saved) / obj.payment).toFixed(0)} {obj.unit}s left.</p>
+                    <div className='plan-wrapper'>
+                        <div className='plan' key={obj.title}>
+                            <img src={obj.image} />
+                            <p>{obj.title}</p>
+                            <p>{obj.currency} {obj.price}</p>
+                        </div>
+
+                        <div class="mx-2.5">
+                            <div class="w-full bg-gray-200 rounded-full h-2.5 dark:bg-gray-700">
+                                <div class="bg-blue-600 h-2.5 rounded-full" style={{ width: `${obj.progress}` }}></div>
+                            </div>
+                        </div>
+                        <p>AUD {(parseFloat(obj.price.replace(/,/g, '')) - obj.saved).toFixed(2)} to go.</p>
                     </div>
                 );
             })}
-        </div>
+
+        </div >
     );
 }
 
