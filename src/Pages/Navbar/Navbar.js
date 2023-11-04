@@ -59,7 +59,7 @@ const Navbar = () => {
 
             </li>
             <li className=" ml-9 mr-4 items-center border-b-2 border-white hover:border-red-500 sm:text-xl md:text-2xl-large lg:text-3xl">
-              <Link to="/PriceChecker">Second PAGE</Link>
+              <Link to="/PriceChecker">Purchase Planner</Link>
             </li>
           </ul>
         </div>
@@ -73,7 +73,7 @@ const Navbar = () => {
               <Link to="/">Home</Link>
             </li>
             <li className="w-full my-4 items-center border-b-2 border-white hover:border-red-500 sm:text-xl md:text-2xl-large lg:text-3xl">
-              <Link to="/PriceChecker">Second PAGE</Link>
+              <Link to="/PriceChecker">Purchase Planner</Link>
             </li>
           </ul>
         </div>
