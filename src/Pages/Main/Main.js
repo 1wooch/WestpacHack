@@ -43,15 +43,9 @@ function Main(){
 
             <MainBanner/>
 
-            <h2 className="text-4xl mt-10"> 
+            <h2 className="text-4xl font-bold mt-10"> 
                 Welcome to the Westpac Analysis Portal!
-                adapteda
-                adapteda
-                adapteda
-                adapteda
-                adapteda
-                adapteda
-                adapteda
+                
             </h2> 
             
           
@@ -60,9 +54,15 @@ function Main(){
                 <div className="text-3xl  mt-[9em]">
                     <div className="flex">
                         <div className="w-1/2">
-                            <p className="text-3xl  mt-[10em]"> 
-                            Welcome to the Westpac Analysis Portal!
+                        <div className="">
+                            <h3 className="text-3xl font-bold  mt-[10em]"> 
+                            Analyse how you spend the money!
+                            </h3> 
+                            <p className="text-2xl mt-[1em]"> 
+                            Our portal will help you to analyse your spending habit and give you a better understanding of your spending habit.
                             </p> 
+                            </div>
+                           
                         </div>
                         <div className="w-1/2">
                             <RevealFromSide direction="right">
@@ -86,9 +86,15 @@ function Main(){
                             </RevealFromSide>
                         </div>
                         <div className="w-1/2">
-                            <p className="text-3xl  mt-[10em]"> 
-                            Welcome to the Westpac Analysis Portal22!
-                            </p> 
+                            <div className="">
+                                <h3 className="text-3xl font-bold mt-[10em]"> 
+                                Before Pay
+                                </h3> 
+                                <p className="text-2xl mt-[1em]"> 
+                                Set your goal and we will help you to achieve it!
+                                </p> 
+                            </div>
+                            
                         </div>
                        
                     </div>                
