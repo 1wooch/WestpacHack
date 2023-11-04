@@ -1,19 +1,23 @@
 import React, { useEffect, useState } from "react";
 import logo from "../../Resource/logo.png";
 import { Link } from "react-router-dom";
+import { useNavigate } from 'react-router-dom';
 
 
 const Navbar = () => {
 
   ///Toggle Menu (Collapsed)///
+  const navigate = useNavigate();
 
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isLogin, setIsLogin] = useState(false);
-
-
+  const [userInfo, setUserInfo] = useState({});
+  const [accountInfo, setAccountInfo] = useState({});
   useEffect(() => {
     if (localStorage.getItem('user') !== null) {
       setIsLogin(true);
+      setUserInfo(JSON.parse(localStorage.getItem('user')));
+      setAccountInfo(JSON.parse(localStorage.getItem('account')));
     }
     else {
       setIsLogin(false);
@@ -25,6 +29,7 @@ const Navbar = () => {
     localStorage.removeItem('user');
     localStorage.removeItem('account');
     setIsLogin(false);
+    navigate('/');
     window.location.reload();
   }
 
@@ -77,12 +82,24 @@ const Navbar = () => {
             <li className=" ml-4 items-center border-b-2 border-white hover:border-red-500 sm:text-xl md:text-2xl-large lg:text-3xl  ">
               <Link to="/">Home</Link>
             </li>
-            <li className=" ml-9 mr-4 items-center border-b-2 border-white hover:border-red-500 sm:text-xl md:text-2xl-large lg:text-3xl">
-              <Link to="PriceChecker">Purchase Planner</Link>
-            </li>
-            <li className=" ml-9 mr-4 items-center border-b-2 border-white hover:border-red-500 sm:text-xl md:text-2xl-large lg:text-3xl">
-              <Link to="PlanList">Plans List</Link>
-            </li>
+
+            
+            {isLogin && (
+                <>
+                  <li className="ml-9 mr-4 items-center border-b-2 border-white hover:border-red-500 sm:text-xl md:text-2xl-large lg:text-3xl">
+                    <Link to="PriceChecker">Purchase Planner</Link>
+                  </li>
+
+                  <li className="ml-9 mr-4 items-center border-b-2 border-white hover:border-red-500 sm:text-xl md:text-2xl-large lg:text-3xl">
+                    <Link to="PlanList">Plans List</Link>
+                  </li>
+
+                  <a className="ml-9 mr-4 items-center border-b-2 border-white hover:border-red-500 sm:text-xl md:text-2xl-large lg:text-3xl"> Name:{userInfo.Name}</a>
+                  {/* <li className="ml-9 mr-4 items-center border-b-2 border-white hover:border-red-500 sm:text-xl md:text-2xl-large lg:text-3xl">
+                    <a>Point:  {accountInfo.LoyaltyPoint}</a>
+                  </li> */}
+                </>
+              )}
             {
               isLogin ? (
                 <li className="ml-9 mr-4 items-center border-b-2 border-white hover:border-red-500 sm:text-xl md:text-2xl-large lg:text-3xl">
@@ -95,12 +112,8 @@ const Navbar = () => {
                 </li>
               )
             }
-
-
           </ul>
-
         </div>
-
       </div>
 
       {/*  !!!!!MOBILE!!!! */}
