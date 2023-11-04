@@ -7,14 +7,14 @@ import PriceChecker from "./Pages/Add_Dream/Add_D";
 function App() {
   return (
     <BrowserRouter>
-      <div> 
-        <Navbar/> 
+      <div>
+        <Navbar />
         <Routes>
-          <Route path="/" element={<Main/>} />  
-          <Route path="/PriceChecker" element={<PriceChecker/>} />
-        </Routes>       
+          <Route path="/" element={<Main />} />
+          <Route path="/PriceChecker" element={<PriceChecker />} />
+        </Routes>
       </div>
-      <Footer/>
+      <Footer />
     </BrowserRouter>
   );
 }

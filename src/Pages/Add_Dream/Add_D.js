@@ -1,17 +1,17 @@
 import React, { useState } from 'react';
-import { getProductPrice } from './GetProdData';
+
 function PriceChecker() {
   const [url, setUrl] = useState('');
   const [price, setPrice] = useState('');
 
-  const handleSubmit = async () => {
-    try {
-      const fetchedPrice = await getProductPrice(url);
-      setPrice(fetchedPrice);
-    } catch (error) {
-      console.error('Error fetching price:', error);
-    }
-  };
+  // const handleSubmit = async () => {
+  //   try {
+  //     const fetchedPrice = await getProductPrice(url);
+  //     setPrice(fetchedPrice);
+  //   } catch (error) {
+  //     console.error('Error fetching price:', error);
+  //   }
+  // };
 
   return (
     <div>
@@ -20,7 +20,8 @@ function PriceChecker() {
         Enter the URL:
         <input type="text" value={url} onChange={(e) => setUrl(e.target.value)} />
       </label>
-      <button onClick={handleSubmit}>Get Price</button>
+      {/* <button onClick={handleSubmit}>Get Price</button> */}
+      <button>Get Price</button>
       {price && <p>Price: {price}</p>}
     </div>
   );
