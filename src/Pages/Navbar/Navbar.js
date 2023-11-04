@@ -43,8 +43,8 @@ const Navbar = () => {
           </div>
           {/* empty red bar */}
           <div className="flex items-center">
-            <div className="w-1/3 border-r-2  border-white-500 ml-4 mt-4 pr-9 sm:w-48 max-w-3xl md:w-64 max-w-4xl lg:w-96 max-w-7xl" >
-              <img src={logo} alt="logo" className="object-fill w-full" />
+            <div className="w-1/3  border-white-500 ml-4 mt-4 pr-10 sm:w-48 max-w-3xl md:w-64 max-w-4xl lg:w-96 max-w-7xl" >
+              <img src={logo} alt="logo" className="object-fill " />
             </div>
 
 
@@ -111,6 +111,18 @@ const Navbar = () => {
               <li className="w-full my-4 items-center border-b-2 border-white hover:border-red-500 sm:text-xl md:text-2xl-large lg:text-3xl">
                 <Link to="/PriceChecker">Purchase Planner</Link>
               </li>
+              {
+                  isLogin ? (
+                    <li className="w-full my-4 items-center border-b-2 border-white hover:border-red-500 sm:text-xl md:text-2xl-large lg:text-3xl">
+                      <button onClick={handleLogout}>Log Out</button>
+                    </li>
+                  ) : (
+                    <li className="w-full my-4 items-center border-b-2 border-white hover:border-red-500 sm:text-xl md:text-2xl-large lg:text-3xl">
+                      
+                      <Link to="/login">Login</Link>
+                    </li>
+                  )
+                }
             </ul>
           </div>
           )

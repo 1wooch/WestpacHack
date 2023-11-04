@@ -81,7 +81,7 @@ function Main(){
                         <div className="w-1/2">
                             <RevealFromSide direction="left">
                                 <div className="text-3xl  mt-[10em]">
-                                <img class="object-contain rounded-lg" src={secondMasImage} alt="first mascot iamge"></img>
+                                <img class="object-contain rounded-lg" src={secondMasImage} alt="second mascot iamge"></img>
                                 </div>
                             </RevealFromSide>
                         </div>
