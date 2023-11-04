@@ -54,22 +54,9 @@ function MainBanner(){
   }, []);
 
   return (
-    //FIRST DESIGN OPTIONS
-    // <div className="container relative flex">
-    //   <div className="main w-full z-0">
-    //     <img className='object-fill' src={bannerImage} />
-    //   </div>
-    //   <div className='z-10'>
-    //     {transitions(({ innerHeight, ...rest }, item) => (
-    //       <animated.div className="transitionsItem" style={rest} onClick={reset}>
-    //         <animated.div style={{ overflow: 'hidden', height: innerHeight }}>{item}</animated.div>
-    //       </animated.div>
-    //     ))}
-        
-    //   </div>
-    // </div>
+
     <div>
-      <div className='relative mt-10'>
+      <div className='relative  flex justify-center items-center '>
         <img className='h-auto w-full max-h-96 rounded-lg' src={bannerImage}/>
         <div className=' absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 '>
         {transitions(({ innerHeight, ...rest }, item) => (
