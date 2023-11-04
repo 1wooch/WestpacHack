@@ -43,5 +43,9 @@
   },
   "devDependencies": {
     "tailwindcss": "^3.3.3"
-  }
+  },
+  "description": "NPM LIST",
+  "main": "tailwind.config.js",
+  "author": "",
+  "license": "ISC"
 }
