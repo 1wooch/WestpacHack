@@ -93,11 +93,14 @@ const Navbar = () => {
                   <li className="ml-9 mr-4 items-center border-b-2 border-white hover:border-red-500 sm:text-xl md:text-2xl-large lg:text-3xl">
                     <Link to="PlanList">Plans List</Link>
                   </li>
-
-                  <a className="ml-9 mr-4 items-center border-b-2 border-white hover:border-red-500 sm:text-xl md:text-2xl-large lg:text-3xl"> Name:{userInfo.Name}</a>
+                  <li className="ml-9 mr-4 items-center border-b-2 border-white hover:border-red-500 sm:text-xl md:text-2xl-large lg:text-3xl">
+                      <Link to="https://timeismoneymyfriend.netlify.app">Income Calculate</Link>
+                    </li>
+                  {/* <a className="ml-9 mr-4 items-center border-b-2 border-white hover:border-red-500 sm:text-xl md:text-2xl-large lg:text-3xl"> Name:{userInfo.Name}</a> */}
                   {/* <li className="ml-9 mr-4 items-center border-b-2 border-white hover:border-red-500 sm:text-xl md:text-2xl-large lg:text-3xl">
                     <a>Point:  {accountInfo.LoyaltyPoint}</a>
                   </li> */}
+                  
                 </>
               )}
             {
