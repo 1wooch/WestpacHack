@@ -127,12 +127,23 @@ const Navbar = () => {
             <li className="w-full my-4 items-center border-b-2 border-white hover:border-red-500 sm:text-xl md:text-2xl-large lg:text-3xl">
               <Link to="/">Home</Link>
             </li>
-            <li className="w-full my-4 items-center border-b-2 border-white hover:border-red-500 sm:text-xl md:text-2xl-large lg:text-3xl">
-              <Link to="/PriceChecker">Purchase Planner</Link>
-            </li>
-            <li className=" w-full my-4 items-center border-b-2 border-white hover:border-red-500 sm:text-xl md:text-2xl-large lg:text-3xl">
-              <Link to="PlanList">Plans List</Link>
-            </li>
+            {isLogin && (
+                <>
+                  <li className="w-full my-4 items-center border-b-2 border-white hover:border-red-500 sm:text-xl md:text-2xl-large lg:text-3xl">
+                    <Link to="PriceChecker">Purchase Planner</Link>
+                  </li>
+
+                  <li className="w-full my-4 items-center border-b-2 border-white hover:border-red-500 sm:text-xl md:text-2xl-large lg:text-3xl">
+                    <Link to="PlanList">Plans List</Link>
+                  </li>
+                  <li className="w-full my-4 items-center border-b-2 border-white hover:border-red-500 sm:text-xl md:text-2xl-large lg:text-3xl">
+                      <Link to="https://timeismoneymyfriend.netlify.app">Income Calculate</Link>
+                    </li>
+                  
+                  
+                </>
+              )}
+           
             {
               isLogin ? (
                 <li className="w-full my-4 items-center border-b-2 border-white hover:border-red-500 sm:text-xl md:text-2xl-large lg:text-3xl">
