@@ -46,29 +46,39 @@ function Login() {
   };
 
   return (
-    <div className='flex '>
-      <div className='w-1/2'>
-        <img src={loginImage}></img>
+    <div className="flex h-screen">
+      <div className="w-1/2 p-4">
+        <img src={loginImage} alt="Login Image" className="w-full h-120 object-cover" />
       </div>
-      <div className='w-1/2'>
-        <h1>Login</h1>
-        <form onSubmit={handleFormSubmit}>
+      <div className="w-1/2  flex flex-col justify-center items-center">
+        <h1 className="text-3xl font-semibold mb-4">Login</h1>
+        <form onSubmit={handleFormSubmit} className="">
           <input
             type="text"
             placeholder="Email"
             value={email}
             onChange={(e) => setEmail(e.target.value)}
+            className="w-full p-2 mb-4 border rounded-md"
           />
-          <input
-            type="password"
-            placeholder="Password"
-            value={password}
-            onChange={(e) => setPassword(e.target.value)}
-          />
-          <button type="submit">Login</button>
+          <div className=" justify-between items-center">
+            <input
+              type="password"
+              placeholder="Password"
+              value={password}
+              onChange={(e) => setPassword(e.target.value)}
+              className="w-full p-2 border rounded-md"
+            />
+            <button
+              type="submit"
+              className=" bg-westpac-red text-white rounded-md p-2 hover:bg-westpac-red"
+            >
+              Login
+            </button>
+          </div>
         </form>
-        </div>
+      </div>
     </div>
+
   );
 }
 
