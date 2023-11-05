@@ -76,6 +76,12 @@ function Login() {
             </button>
           </div>
         </form>
+
+        <div>
+          <a>Email : JohnDoe@gmail.com</a>
+          <br />
+          <a>Password : password123</a>
+        </div>
       </div>
     </div>
 
